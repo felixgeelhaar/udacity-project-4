@@ -50,6 +50,24 @@ In this project, I learned a lot about flask applications, Makefiles and how to 
 
 There is a indentation issue with the provided yaml file for circle ci which made it quite difficult to just run it. Also Pylint was missing in the requirements.txt – think about adding it. Also the formatted logging is already a outdated linting rule for Pylint so that I needed to change it to a normal string interpolation.
 
+### Files
+
+* In the Project the main file is the `app.py`, that's your application which you'll also run within the Dockerfile. 
+* Additionally we have the `make_prediction.sh` that is used to send a request to Port 8000 to the application (that't why we needed port forwarding). 
+* There is also the `run_docker.sh` & `upload_docker.sh`. The `run_docker.sh` takes care of building and running your Docker Container and the `upload_docker.sh` ships it to the Docker Registry alias Docker Hub
+* The last sh-script is named `run_kubernetes.sh` and takes care of running your Container within a K8s Cluster
+* `requirements.txt` includes all necessary third-party-dependencies
+* `Makefile` as a task collection to run linting, validation, installation and so forth
+* `output_txt_files`is the folder with the project requirements and the output txt files
+* `model_data` has needed model traings data from boston housing
+* `.circleci` as our CI/CD pipeline configuration
+
+### Running it
+
+To run this repo, after pulling it, you need to create a virtual environment: `python3 -m venv venv` and activate it afterwards `source venv/bin/actiave`. After setting up the virtual environment `make install` will install all necessary external modules.
+
+To lint your project run `make lint` to ensure everything is working. As I wrote above, I had difficulties since the linting rules updated. Additionally I added the optimized way for writing log statements.
+
 ### Solution
 
 This is my submission, so before you use it, try it on your own.
