@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![FelixGeelhaar](https://circleci.com/gh/FelixGeelhaar/udacity-project-4.svg?style=svg)](<LINK>)
 
 ## Project Overview
 
@@ -40,3 +40,16 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+
+## Project Summary
+
+In this project, I learned a lot about flask applications, Makefiles and how to configure and push images to DockerHub and deploy them afterwards via K8s. It was a lot of fun.
+
+### Learnings
+
+There is a indentation issue with the provided yaml file for circle ci which made it quite difficult to just run it. Also Pylint was missing in the requirements.txt – think about adding it. Also the formatted logging is already a outdated linting rule for Pylint so that I needed to change it to a normal string interpolation.
+
+### Solution
+
+This is my submission, so before you use it, try it on your own.
