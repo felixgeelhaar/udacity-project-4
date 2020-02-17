@@ -43,3 +43,13 @@ DevOps_Microservices/project-ml-microservice-kubernetes on  master [!] on �
 0     0  6.575  296.0     15.3  396.9   4.98
 [2020-02-16 19:58:01,459] INFO in app: Predicted value: [20.35373177134412]
 127.0.0.1 - - [16/Feb/2020 19:58:01] "POST /predict HTTP/1.1" 200 -
+
+
+project-ml-microservice-kubernetes on  master [$] on 🐳 v19.03.5 
+➜ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
